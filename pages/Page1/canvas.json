@@ -1069,6 +1069,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 18.49609375,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
@@ -1079,11 +1080,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Label",
+                      "text": "{{Text3.text}}",
                       "key": "f2vpjb7h9k",
                       "isDeprecated": false,
                       "rightColumn": 35,
