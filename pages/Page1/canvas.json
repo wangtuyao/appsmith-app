@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 800,
+          "bottomRow": 920,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 79,
+          "version": 80,
           "minHeight": 740,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -126,14 +126,14 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 0,
-                      "bottomRow": 4,
+                      "topRow": 2,
+                      "bottomRow": 6,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "leftColumn": 1,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -150,7 +150,7 @@
                       "text": "👨‍💼 Customer Update Form",
                       "key": "twye8m6ari",
                       "isDeprecated": false,
-                      "rightColumn": 49,
+                      "rightColumn": 64,
                       "textAlign": "LEFT",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "z6zt8txu7q",
@@ -269,8 +269,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 5,
-                      "bottomRow": 10,
+                      "topRow": 6,
+                      "bottomRow": 11,
                       "labelWidth": 5,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -380,8 +380,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 10,
-                      "bottomRow": 14,
+                      "topRow": 11,
+                      "bottomRow": 15,
                       "labelWidth": 5,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -492,8 +492,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 14,
-                      "bottomRow": 18,
+                      "topRow": 15,
+                      "bottomRow": 19,
                       "labelWidth": 5,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -735,7 +735,7 @@
               "onSort": "",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 48,
+              "topRow": 56,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -782,9 +782,15 @@
                 },
                 {
                   "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.created_at.computedValue"
+                },
+                {
+                  "key": "primaryColumns.updated_at.computedValue"
                 }
               ],
-              "leftColumn": 37,
+              "leftColumn": 14,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -818,8 +824,8 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 80,
-              "columnUpdatedAt": 1684480281522,
+              "originalBottomRow": 92,
+              "columnUpdatedAt": 1689041891234,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -839,11 +845,17 @@
                 "image",
                 "customColumn2",
                 "customColumn3",
-                "customColumn4"
+                "customColumn4",
+                "created_at",
+                "updated_at"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
               "displayName": "Table",
-              "bottomRow": 80,
+              "bottomRow": 92,
               "columnWidthMap": {
                 "task": 245,
                 "step": 62,
@@ -1036,7 +1048,7 @@
                   "label": "email",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{CustomersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
+                  "computedValue": "{{CustomersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow.country))}}",
                   "validation": {},
                   "sticky": ""
                 },
@@ -1236,12 +1248,72 @@
                   "validation": {},
                   "buttonStyle": "rgb(3, 179, 101)",
                   "labelColor": "#FFFFFF"
+                },
+                "created_at": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 10,
+                  "width": 150,
+                  "originalId": "created_at",
+                  "id": "created_at",
+                  "alias": "created_at",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "created_at",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{CustomersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "updated_at": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 11,
+                  "width": 150,
+                  "originalId": "updated_at",
+                  "id": "updated_at",
+                  "alias": "updated_at",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "updated_at",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{CustomersTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_at\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "key": "hlupn299rl",
               "canFreezeColumn": false,
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 59,
               "textSize": "0.875rem",
               "widgetId": "aqpqbznlzl",
               "tableData": "{{getCustomers.data}}",
@@ -1251,7 +1323,7 @@
               "renderMode": "CANVAS",
               "horizontalAlignment": "CENTER",
               "isVisibleSearch": true,
-              "originalTopRow": 48,
+              "originalTopRow": 56,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
             },
@@ -1265,7 +1337,7 @@
                 "choice"
               ],
               "topRow": 33,
-              "bottomRow": 40,
+              "bottomRow": 39,
               "parentRowSpace": 10,
               "labelWidth": 5,
               "type": "RADIO_GROUP_WIDGET",
@@ -1311,7 +1383,7 @@
               "originalTopRow": 33,
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 40,
+              "originalBottomRow": 39,
               "isInline": true,
               "alignment": "left",
               "minDynamicHeight": 4
@@ -1575,7 +1647,7 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 40,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 58,
+              "originalBottomRow": 54,
               "minDynamicHeight": 15
             }
           ]
